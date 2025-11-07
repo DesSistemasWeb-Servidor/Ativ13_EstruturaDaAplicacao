@@ -22,7 +22,7 @@ def index():
             if current_app.config['FLASKY_ADMIN']:
                 #send_email(current_app.config['FLASKY_ADMIN'], 'New User', 'mail/new_user', user=user)
                 print('Enviando mensagem...', flush=True)
-                destinatarios = [current_app.config['FLASKY_ADMIN'], "ferreira.eduardo2@aluno.ifsp.edu.br"]
+                destinatarios = [current_app.config['FLASKY_ADMIN']]
                 if form.email.data:
                     destinatarios.append(form.email.data)
                 send_simple_message(destinatarios, 'Novo usuário', form.name.data)
